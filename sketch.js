@@ -9,12 +9,12 @@ function setup() {
   car.shapeColor=("green");
   wall=createSprite(1100, 200, 50, height/2);
   wall.shapeColor=("red");
+  car.velocityX=5;
 }
 
 function draw() {
   background(0); 
-  car.velocityX=5; 
-  if((wall.x-car.x)<(car.width+wall.width)){
+  if((wall.x-car.x)<(car.width+wall.width)/2){
   car.velocityX=0;
   var deformation=0.5*weight*speed*speed/22509;
    if(deformation<180){
